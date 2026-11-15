@@ -1,0 +1,10 @@
+(version 1)
+# Isolation distances live in the net classes (Board Setup > Net Classes):
+#   HV24 (24 V input side) 2.0 mm, RS485 (isolated bus) 2.0 mm, SHIELD (chassis) 0.6 mm.
+# The rules below only relax them between nets of the same domain.
+(rule "inside 24V primary domain"
+  (condition "A.NetClass == 'HV24' && B.NetClass == 'HV24'")
+  (constraint clearance (min 0.2mm)))
+(rule "inside RS-485 bus domain"
+  (condition "A.NetClass == 'RS485' && B.NetClass == 'RS485'")
+  (constraint clearance (min 0.2mm)))

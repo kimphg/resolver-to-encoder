@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "resolver_emu")(type "KiCad")(uri "${KIPRJMOD}/resolver_emu.kicad_sym")(options "")(descr "Project symbols"))
+)
